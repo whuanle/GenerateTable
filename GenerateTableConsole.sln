@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateTableConsole", "GenerateTableConsole.csproj", "{2AFB0D7B-7A23-4D8D-AFD1-541D50808FEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AFB0D7B-7A23-4D8D-AFD1-541D50808FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AFB0D7B-7A23-4D8D-AFD1-541D50808FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AFB0D7B-7A23-4D8D-AFD1-541D50808FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AFB0D7B-7A23-4D8D-AFD1-541D50808FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {026B59CA-512D-404A-AF2F-E8263134EC2B}
+	EndGlobalSection
+EndGlobal
