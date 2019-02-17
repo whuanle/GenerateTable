@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp4
+namespace GenerateTableConsole
 {
     /// <summary>
     /// table

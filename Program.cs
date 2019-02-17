@@ -1,13 +1,22 @@
 ﻿using System;
 
-namespace ConsoleApp4
+namespace GenerateTableConsole
 {
     /// <summary>
     /// Receiving commands from the console, creating or manipulating tables on the console
     /// </summary>
     public class UseTable
     {
-        public ResponseModel RunCommand(TableModel table, string strCommand)
+        private TableModel table = new TableModel();
+        public UseTable()
+        {
+        }
+        /// <summary>
+        /// run input command
+        /// </summary>
+        /// <param name="strCommand"></param>
+        /// <returns></returns>
+        public ResponseModel RunCommand(string strCommand)
         {
             string[] sArray = strCommand.Split(" ");
             if (sArray[0] == "C")
@@ -26,7 +35,7 @@ namespace ConsoleApp4
                             };
                         table.RowCount = rowCount;
                         table.ColumnCount = columnCount;
-                        CreateTable(table);
+                        CreateTable();
 
                         return new ResponseModel
                         {
@@ -62,7 +71,7 @@ namespace ConsoleApp4
                         insert.y = uint.Parse(sArray[2]);
                         insert.x = uint.Parse(sArray[1]);
                         insert.Number = uint.Parse(sArray[3]);
-                        InsertNumber(table, insert);
+                        InsertNumber(insert);
                         return new ResponseModel
                         {
                             Code = 200,
@@ -100,7 +109,7 @@ namespace ConsoleApp4
                         sum.y2 = uint.Parse(sArray[4]);
                         sum.x3 = uint.Parse(sArray[5]);
                         sum.y3 = uint.Parse(sArray[6]);
-                        SumNumbers(table, sum);
+                        SumNumbers(sum);
                         return new ResponseModel
                         {
                             Code = 200,
@@ -139,8 +148,7 @@ namespace ConsoleApp4
         /// <summary>
         /// Use commands to create tables
         /// </summary>
-        /// <param name="table"></param>
-        public void CreateTable(TableModel table)
+        public void CreateTable()
         {
             uint row = table.RowCount + 2;
             uint column = (table.ColumnCount + 2) * 3;
@@ -169,8 +177,7 @@ namespace ConsoleApp4
         /// <summary>
         /// Print table
         /// </summary>
-        /// <param name="table"></param>
-        public void ConsoleTable(TableModel table)
+        public void ConsoleTable()
         {
             for (int i = 0; i < table.RowCount + 2; i++)
             {
@@ -186,9 +193,8 @@ namespace ConsoleApp4
         /// <summary>
         /// Insert Number
         /// </summary>
-        /// <param name="table"></param>
-        /// <param name="number"></param>
-        public void InsertNumber(TableModel table, InsertNumberModel insertnumber)
+        /// <param name="insertnumber"></param>
+        public void InsertNumber(InsertNumberModel insertnumber)
         {
             uint one = 0, ten = 0, hundred = 0;
             if (insertnumber.Number >= 100)
@@ -228,23 +234,22 @@ namespace ConsoleApp4
         /// <summary>
         /// Find the sum of (x1, y1) and (x2, y2) and insert it into (x3, y3)
         /// </summary>
-        public void SumNumbers(TableModel table, SumNumberModel sumNumber)
+        public void SumNumbers(SumNumberModel sumNumber)
         {
-            uint sum = GetNumber(table, sumNumber.x1, sumNumber.y1) + GetNumber(table, sumNumber.x2, sumNumber.y2);
+            uint sum = GetNumber(sumNumber.x1, sumNumber.y1) + GetNumber(sumNumber.x2, sumNumber.y2);
             InsertNumberModel insert = new InsertNumberModel();
             insert.y = sumNumber.y3;
             insert.x = sumNumber.x3;
             insert.Number = sum;
-            InsertNumber(table, insert);
+            InsertNumber(insert);
         }
         /// <summary>
         /// Get a Number,form (x,y)
         /// </summary>
-        /// <param name="table"></param>
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        public uint GetNumber(TableModel table, uint x, uint y)
+        public uint GetNumber(uint x, uint y)
         {
             if (y > table.RowCount || x > table.ColumnCount)
                 throw new System.IndexOutOfRangeException();
@@ -274,7 +279,7 @@ namespace ConsoleApp4
             while (true)
             {
                 string s = Console.ReadLine();
-                var re = useTable.RunCommand(table, s);
+                var re = useTable.RunCommand(s);
                 if (re.Code == 200)
                 {
                     Console.WriteLine(re.Result);
@@ -289,12 +294,13 @@ namespace ConsoleApp4
 
             while (true)
             {
-                useTable.ConsoleTable(table);
+                useTable.ConsoleTable();
+                Console.WriteLine("enter command:");
                 string s = Console.ReadLine();
                 if (s == "Q")
                     break;
 
-                var re = useTable.RunCommand(table, s);
+                var re = useTable.RunCommand(s);
                 if (re.Code == 200)
                 {
                     Console.WriteLine(re.Result);

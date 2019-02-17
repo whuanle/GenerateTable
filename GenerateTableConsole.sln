@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateTableConsole", "GenerateTableConsole.csproj", "{2AFB0D7B-7A23-4D8D-AFD1-541D50808FEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTest", "..\NUnitTest\NUnitTest.csproj", "{C550C5CD-85D3-4454-ABC6-48BCA94C6950}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2AFB0D7B-7A23-4D8D-AFD1-541D50808FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AFB0D7B-7A23-4D8D-AFD1-541D50808FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AFB0D7B-7A23-4D8D-AFD1-541D50808FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C550C5CD-85D3-4454-ABC6-48BCA94C6950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C550C5CD-85D3-4454-ABC6-48BCA94C6950}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C550C5CD-85D3-4454-ABC6-48BCA94C6950}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C550C5CD-85D3-4454-ABC6-48BCA94C6950}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
