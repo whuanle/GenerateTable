@@ -65,13 +65,20 @@ Unit tests have been added to the project, and NUNIT can be used to complete the
 ----------
 
 **Recent modifications：**
-time:2019-2-17 9:00
-Modified Readme.md.
-Some function names and input parameters have been modified.
-The coupling degree is reduced.
-Adding unit tests: Nunit.
+time:2019-2-17 9:00  
+Modified Readme.md.  
+Some function names and input parameters have been modified.  
+The coupling degree is reduced.  
+Adding unit tests: Nunit.  
 
-time:2019-2-17 10:03
-Use StyleCop. Analyrs for code specification checking.
-The quality of the code is checked and part of the code is modified.
-Code readability has been improved.
+time:2019-2-17 10:03  
+Use StyleCop. Analyrs for code specification checking.  
+The quality of the code is checked and part of the code is modified.  
+Code readability has been improved.  
+
+time:2019-2-17 10-17
+Support for docker has been added.You can use programs in Linux.  
+Docker:  
+Version 2.0.0.3 (31259)  
+Channel: stable  
+Build: 8858 db3  

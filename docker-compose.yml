@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  generatetableconsole:
+    image: ${DOCKER_REGISTRY-}generatetableconsole
+    build:
+      context: .
+      dockerfile: Dockerfile
