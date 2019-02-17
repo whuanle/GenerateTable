@@ -10,7 +10,9 @@ namespace GenerateTableConsole
     public class TableModel
     {
         public uint RowCount { get; set; }
+
         public uint ColumnCount { get; set; }
+
         public char[,] TableData { get; set; }
     }
 }

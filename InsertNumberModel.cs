@@ -10,7 +10,9 @@ namespace GenerateTableConsole
     public class InsertNumberModel
     {
         public uint y { get; set; }
+
         public uint x { get; set; }
+
         public uint Number { get; set; }
     }
     /// <summary>
